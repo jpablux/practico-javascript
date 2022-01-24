@@ -15,10 +15,15 @@ var ResultSquarePerimeter = document.getElementById("ShowSquarePerimeter");
 var ResultTriangleArea = document.getElementById("ShowTriangleArea");
 var ResultTrianglePerimeter = document.getElementById("ShowTrianglePerimeter");
 
-
 //Rectangulos
 var ResultRectangleArea = document.getElementById("ShowRectangleArea");
 var ResultRectanglePerimeter = document.getElementById("ShowRectanglePerimeter");
+//Trapecios
+var ResultTrapezoidArea = document.getElementById("ShowTrapezoidArea");
+var ResultTrapezoidPerimeter = document.getElementById("ShowTrapezoidPerimeter");
+//Paralelogramos
+var ResultParalelogramArea = document.getElementById("ShowParalelogramArea");
+var ResultParalelogramPerimeter = document.getElementById("ShowParalelogramPerimeter");
 
 document.addEventListener('mouseup', function(e){
     if (!NavMenu.contains(e.target)){
@@ -115,6 +120,29 @@ function PerimetroRectangulo(base,altura){
     return (2 * base) + (2 * altura);
 }
 
+//Codigo Trapecio
+
+function AreaTrapecio(baseb,baseB,altura){
+    return ((parseFloat(baseb) + parseFloat(baseB))/(2)) * parseFloat(altura);
+}
+
+function PerimetroTrapecio(baseb,baseB,altura){
+    var h = (parseFloat(baseB) - parseFloat(baseb)) / (2);
+    var r = Math.sqrt(Math.pow(parseFloat(altura),2) + Math.pow(h,2));
+    var x = parseFloat(baseB) + parseFloat(baseb) + (r * 2);
+    return x;
+}
+
+//Codigo Paralelogramo
+
+function AreaParalelogramo(base, altura){
+    return base * altura;
+    }
+
+function PerimetroParalelogram(ladoa, ladob){
+    return (2 * ladoa) + (2 * ladob);
+}
+
 // Interaccion con HTML
 
 function CalcularPerimetroCuadrado(){
@@ -190,4 +218,49 @@ function CalcularPerimetroRectangulo(){
 
     const perimetro = PerimetroRectangulo(base,altura);
     ResultRectanglePerimeter.innerHTML = perimetro.toFixed(2);
+}
+
+function CalcularAreaTrapecio(){
+    const inputbaseb = document.getElementById("InputTrapecioBaseb");
+    const baseb = inputbaseb.value;
+    const inputbaseB =  document.getElementById("InputTrapecioBaseB");
+    const baseB = inputbaseB.value;
+    const inputh = document.getElementById("InputTrapecioAltura");
+    const h = inputh.value;
+
+    const area = AreaTrapecio(baseb,baseB,h);
+    ResultTrapezoidArea.innerHTML = area.toFixed(2) + "&sup2;";
+}
+
+function CalcularPerimetroTrapecio(){
+    const inputbaseb = document.getElementById("InputTrapecioBaseb");
+    const baseb = inputbaseb.value;
+    const inputbaseB =  document.getElementById("InputTrapecioBaseB");
+    const baseB = inputbaseB.value;
+    const inputh = document.getElementById("InputTrapecioAltura");
+    const h = inputh.value;
+
+    const perimetro = PerimetroTrapecio(baseb,baseB,h);
+    ResultTrapezoidPerimeter.innerHTML = perimetro.toFixed(2);
+}
+
+function CalcularAreaParalelogramo(){
+    const ladob = document.getElementById("InputParalelogramoB");
+    const altura = document.getElementById("InputParalelogramoAltura");
+    const b = ladob.value;
+    const h = altura.value;
+
+    const area = AreaParalelogramo(b,h);
+    ResultParalelogramArea.innerHTML = area.toFixed(2) + "&sup2;";
+}
+
+function CalcularPerimetroParalelogramo(){
+    const ladoa = document.getElementById("InputParalelogramoA");
+    const ladob = document.getElementById("InputParalelogramoB");
+    const a = ladoa.value;
+    const b = ladob.value;
+
+    const perimetro = PerimetroParalelogram(a,b);
+    ResultParalelogramPerimeter.innerHTML = perimetro.toFixed(2);
+
 }
