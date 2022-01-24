@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles_mobile.css">
+    <title>Circles | JS Practice</title>
+</head>
+<body>
+    <div class="main__container">
+    <header>
+        <nav class="nav__menu" id="nav__menu">
+            <div class="icon__container" id="close__menu" onclick="hideMenu()">
+                <img src="img/Close_LG.svg" alt="close">
+            </div>
+            <ul>
+                <li><a href="#">Areas & Perimeters</a></li>
+                <li><a href="#">Hypotenuse</a></li>
+                <li><a href="#">Volumes</a></li>
+                <li><a href="#">Trigonometry</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="menu__icon" id="menu__icon" onclick="showMenu()">
+        <a href="#">
+            <img src="img/Hamburger_LG.svg" alt="menu">
+        </a>
+        <a href="index.html"><img src="img/Top logo Mobile.svg" alt="Geometrics.io" class="logo_top_mobile"></a>
+    </div>
+    <main>
+        <p class="figure__title">Circle</p>
+        <img src="img/Circle Image Group.svg" alt="Circle">
+        <label for="Circle_input">Enter <p class="value__label">r</p>value</label>
+        <input type="number" id="InputCirculo" class="input__style">
+        <div class="results">
+            <p class="results__style">Area: <span class="text__result" id="ShowCircleArea"></span></p>
+            <p class="results__style">Perimeter: <span class="text__result" id="ShowCirclePerimeter"></span></p>
+        </div>
+        <button type = "button" class="button__style" id="BotonAreaCirculo" onclick="CalcularAreaCirculo()" >Calculate Area</button>
+        <button class="button__style" id="BotonAreaPerimetro" onclick="CalcularPerimetroCirculo()">Calculate Perimeter</button>
+        <button class="button__style" onclick="parent.location='index.html'">Back Home</button>
+        
+    </main> 
+    <footer>
+        <img src="img/Designed and Developed by Jpablux.svg" alt="Jpablux">    
+    </footer>
+    <script src="figuras.js"></script>
+</body>
