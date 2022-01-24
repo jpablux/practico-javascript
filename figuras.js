@@ -4,8 +4,17 @@ var MenuIcon = document.getElementById("menu__icon");
 var NavMenu = document.getElementById("nav__menu");
 var CloseMenu = document.getElementById("close__menu");
 var Results = document.getElementById("results");
+
+//Circulos
 var ResultCircleArea = document.getElementById("ShowCircleArea");
 var ResultCirclePerimeter = document.getElementById("ShowCirclePerimeter");
+//Cuadrados
+var ResultSquareArea = document.getElementById("ShowSquareArea");
+var ResultSquarePerimeter = document.getElementById("ShowSquarePerimeter");
+//Triangulos
+var ResultTriangleArea = document.getElementById("ShowTriangleArea");
+var ResultTrianglePerimeter = document.getElementById("ShowTrianglePerimeter");
+
 document.addEventListener('mouseup', function(e){
     if (!NavMenu.contains(e.target)){
         NavMenu.style.display = "none";
@@ -45,9 +54,9 @@ console.groupEnd();
 
 console.group("Triangulos");
 
-function PerimetroTriangulo(ladotri1, ladrotri2, basetri){
+function PerimetroTriangulo(basetri){
 
-    return ladotri1 + ladrotri2 + basetri;
+    return basetri * 3;
 
 } 
 
@@ -96,8 +105,8 @@ function CalcularPerimetroCuadrado(){
     const input = document.getElementById("InputCuadrado");
     const value = input.value;
 
-    const perimetro = PerimetroCuadrado(value);
-    alert(perimetro);
+    const perimeter = PerimetroCuadrado(value);
+    ResultSquarePerimeter.innerHTML = perimeter.toFixed(2);
 }
 
 function CalcularAreaCuadrado(){
@@ -105,16 +114,17 @@ function CalcularAreaCuadrado(){
     const value = input.value;
 
     const area = AreaCuadrado(value);
-    alert(area);
+    ResultSquareArea.innerHTML = area.toFixed(2) + "&sup2;";
 }
 
 function CalcularAreaCirculo(){
     
     const input = document.getElementById("InputCirculo");
     const value = input.value;
-
     const area = AreaCirculo(value);
+    
     ResultCircleArea.innerHTML = area.toFixed(2) + "&sup2;";
+    
 }
 
 function CalcularPerimetroCirculo(){
@@ -123,4 +133,24 @@ function CalcularPerimetroCirculo(){
 
     const perimeter = PerimetroCirculo(value);
     ResultCirclePerimeter.innerHTML = perimeter.toFixed(2);
+}
+
+function CalcularAreaTriangulo(){
+    const inputaltura = document.getElementById("InputTrianguloAltura");
+    const altura = inputaltura.value;
+
+    const inputbase = document.getElementById("InputTrianguloBase");
+    const base = inputbase.value;
+
+    const area = AreaTriangulo(base,altura);
+
+    ResultTriangleArea.innerHTML = area.toFixed(2) + "&sup2;";
+}
+
+function CalcularPerimetroTriangulo(){
+    const inputbase = document.getElementById("InputTrianguloBase");
+    const base = inputbase.value;
+
+    const perimetro = PerimetroTriangulo(base);
+    ResultTrianglePerimeter.innerHTML = perimetro.toFixed(2);
 }

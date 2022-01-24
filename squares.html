@@ -30,16 +30,16 @@
         <a href="index.html"><img src="img/Top logo Mobile.svg" alt="Geometrics.io" class="logo_top_mobile"></a>
     </div>
     <main>
-        <p class="figure__title">Circle</p>
-        <img src="img/Circle Image Group.svg" alt="Circle">
-        <label for="Circle_input">Enter <p class="value__label">r</p>value</label>
-        <input type="number" id="InputCirculo" class="input__style" pattern="/^-?\d+\.?\d*$/" onKeyPress="if(this.value.length==6) return false;">
+        <p class="figure__title">Square</p>
+        <img src="img/Square Image Group.svg" alt="Circle">
+        <label for="Square_input">Enter <p class="value__label">s</p>value</label>
+        <input type="number" id="InputCuadrado" class="input__style" pattern="/^-?\d+\.?\d*$/" onKeyPress="if(this.value.length==6) return false;">
         <div class="results">
-            <p class="results__style">Area: <span class="text__result" id="ShowCircleArea"></span></p>
-            <p class="results__style">Perimeter: <span class="text__result" id="ShowCirclePerimeter"></span></p>
+            <p class="results__style">Area: <span class="text__result" id="ShowSquareArea"></span></p>
+            <p class="results__style">Perimeter: <span class="text__result" id="ShowSquarePerimeter"></span></p>
         </div>
-        <button type = "button" class="button__style" id="BotonAreaCirculo" onclick="CalcularAreaCirculo()" >Calculate Area</button>
-        <button class="button__style" id="BotonAreaPerimetro" onclick="CalcularPerimetroCirculo()">Calculate Perimeter</button>
+        <button type = "button" class="button__style" id="BotonAreaCuadrado" onclick="CalcularAreaCuadrado()" >Calculate Area</button>
+        <button class="button__style" id="BotonAreaPerimetro" onclick="CalcularPerimetroCuadrado()">Calculate Perimeter</button>
         <button class="button__style" onclick="parent.location='index.html'">Back Home</button>
         
     </main> 

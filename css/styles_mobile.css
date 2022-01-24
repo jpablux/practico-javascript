@@ -34,6 +34,10 @@ header{
     justify-content: right;
 }
 
+main img{
+    margin-bottom: 30px;
+}
+
 .main__container{
     display: flex;
     flex-direction: column;
@@ -42,7 +46,7 @@ header{
 }
 
 p.figure__title{
-    margin-bottom: 54px;
+    margin-bottom: 24px;
     font-size: 36px;
     font-weight: bold;
     text-align:center;
@@ -57,8 +61,7 @@ p.value__label{
 }
 
 .value__label{
-    margin-top: 50px;
-    margin-bottom: 15px;
+    margin-bottom: 10px;
 }
 
 .input__style{
@@ -253,7 +256,7 @@ main .main__description{
 }
 
 main .results{
-    display: flex;
+    display:flex;
     flex-direction: column;
     justify-content: center;
     align-items: left;
@@ -279,7 +282,7 @@ main .results{
 }
 
 footer{
-    margin-top: 50px;
+    margin-top: 15px;
     text-align: center;
 }
 
