@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/styles_mobile.css">
-    <title>Circles | JS Practice</title>
+    <title>Rectangles | JS Practice</title>
 </head>
 <body>
     <div class="main__container">
@@ -30,16 +30,18 @@
         <a href="index.html"><img src="img/Top logo Mobile.svg" alt="Geometrics.io" class="logo_top_mobile"></a>
     </div>
     <main>
-        <p class="figure__title">Circle</p>
-        <img src="img/Circle Image Group.svg" alt="Circle">
-        <label for="Circle_input">Enter <p class="value__label">r</p>value</label>
-        <input type="number" id="InputCirculo" class="input__style" pattern="/^-?\d+\.?\d*$/" onKeyPress="if(this.value.length==6) return false;">
+        <p class="figure__title">Rectangle</p>
+        <img src="img/Rectangle Image Group.svg" alt="Rectangle">
+        <label for="Rectangle_input">Enter <p class="value__label">a</p>value</label>
+        <input type="number" id="InputRectanguloAltura" class="input__style" pattern="/^-?\d+\.?\d*$/" onKeyPress="if(this.value.length==6) return false;">
+        <label for="Rectangleb_input">Enter <p class="value__label">b</p>value</label>
+        <input type="number" id="InputRectanguloBase" class="input__style" pattern="/^-?\d+\.?\d*$/" onKeyPress="if(this.value.length==6) return false;">
         <div class="results">
-            <p class="results__style">Area: <span class="text__result" id="ShowCircleArea"></span></p>
-            <p class="results__style">Perimeter: <span class="text__result" id="ShowCirclePerimeter"></span></p>
+            <p class="results__style">Area: <span class="text__result" id="ShowRectangleArea"></span></p>
+            <p class="results__style">Perimeter: <span class="text__result" id="ShowRectanglePerimeter"></span></p>
         </div>
-        <button type = "button" class="button__style" id="BotonAreaCirculo" onclick="CalcularAreaCirculo()" >Calculate Area</button>
-        <button class="button__style" id="BotonAreaPerimetro" onclick="CalcularPerimetroCirculo()">Calculate Perimeter</button>
+        <button type = "button" class="button__style" id="BotonAreaRectangulo" onclick="CalcularAreaRectangulo()" >Calculate Area</button>
+        <button class="button__style" id="BotonPerimetroRectangulo" onclick="CalcularPerimetroRectangulo()">Calculate Perimeter</button>
         <button class="button__style" onclick="parent.location='index.html'">Back Home</button>
         
     </main> 

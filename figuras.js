@@ -15,6 +15,11 @@ var ResultSquarePerimeter = document.getElementById("ShowSquarePerimeter");
 var ResultTriangleArea = document.getElementById("ShowTriangleArea");
 var ResultTrianglePerimeter = document.getElementById("ShowTrianglePerimeter");
 
+
+//Rectangulos
+var ResultRectangleArea = document.getElementById("ShowRectangleArea");
+var ResultRectanglePerimeter = document.getElementById("ShowRectanglePerimeter");
+
 document.addEventListener('mouseup', function(e){
     if (!NavMenu.contains(e.target)){
         NavMenu.style.display = "none";
@@ -99,6 +104,17 @@ return PI * (radio * radio);
 }
 console.groupEnd();
 
+
+//Codigo Rectangulo
+
+function AreaRectangulo(base,altura){
+    return base * altura;
+}
+
+function PerimetroRectangulo(base,altura){
+    return (2 * base) + (2 * altura);
+}
+
 // Interaccion con HTML
 
 function CalcularPerimetroCuadrado(){
@@ -153,4 +169,25 @@ function CalcularPerimetroTriangulo(){
 
     const perimetro = PerimetroTriangulo(base);
     ResultTrianglePerimeter.innerHTML = perimetro.toFixed(2);
+}
+
+
+function CalcularAreaRectangulo(){
+    const inputbase = document.getElementById("InputRectanguloBase");
+    const inputaltura = document.getElementById("InputRectanguloAltura");
+    const base = inputbase.value;
+    const altura = inputaltura.value;
+
+    const area = AreaRectangulo(base,altura);
+    ResultRectangleArea.innerHTML = area.toFixed(2) + "&sup2;";
+}
+
+function CalcularPerimetroRectangulo(){
+    const inputbase = document.getElementById("InputRectanguloBase");
+    const inputaltura = document.getElementById("InputRectanguloAltura");
+    const base = inputbase.value;
+    const altura = inputaltura.value;
+
+    const perimetro = PerimetroRectangulo(base,altura);
+    ResultRectanglePerimeter.innerHTML = perimetro.toFixed(2);
 }
