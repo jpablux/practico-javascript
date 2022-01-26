@@ -34,6 +34,15 @@ header{
     justify-content: right;
 }
 
+main{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 10px;
+    margin-top: 10px;
+}
+
 main img{
     margin-bottom: 30px;
 }
@@ -76,16 +85,21 @@ p.value__label{
 
 .nav__menu{
     display: none;
+    margin-right: 0px;
     width: 100%;
     max-width: 188px;
     min-width: 100px;
     background-color: var(--warm_black);
     position: absolute;
     z-index: 2;
-    top: 15px;
+    top: 10px;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     border-radius: 10px 10px 10px 10px;
 
+}
+
+.nav__menu .logo__container{
+    display: none;
 }
 
 .nav__menu .icon__container{
@@ -95,6 +109,7 @@ p.value__label{
     overflow: hidden;
     cursor: pointer;
 }
+
 
 .nav__menu .icon__container img:hover{
     background-color: var(--soft-gray);
@@ -110,9 +125,12 @@ p.value__label{
 
 .nav__menu ul{
     
+    display: flex;
+    flex-direction: column;
     width: 188px;
     padding-top: 33px;
     padding-bottom: 139px;
+    margin-right: 0px;
     font-size: 14px;
     font-weight: bold;
     
@@ -120,6 +138,7 @@ p.value__label{
 
 .nav__menu ul li{
     list-style: none;
+    margin: 0px;
 
 }
 
@@ -136,12 +155,10 @@ p.value__label{
     background-color: var(--soft-gray);
 }
 
-main{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding-top: 40px;
+
+
+.logo-desktop-container{
+    display: none;
 }
 
 .menu__icon{
@@ -153,6 +170,14 @@ main{
 
 .menu__icon .logo_top_mobile{
     margin-left:100px;
+}
+
+.logo_container{
+    display: none;
+}
+
+.logo__container{
+    display: block;
 }
 
 .logo__container img{
@@ -170,7 +195,8 @@ main .main__description{
 }
 
 .menu__container{
-    padding-top: 63px;
+    padding-top: 2.5rem;
+    margin-top: 0;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -201,6 +227,14 @@ main .main__description{
     box-shadow:  5px 5px 10px #202325,
                 -5px -5px 10px #52595d;
 
+}
+
+.link__container .circle_mainpage{
+    padding:15px 75px;
+}
+
+.link__container .square_mainpage{
+    padding:15px 75px;
 }
 
 .link__container .triangle_mainpage{

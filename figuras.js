@@ -25,12 +25,6 @@ var ResultTrapezoidPerimeter = document.getElementById("ShowTrapezoidPerimeter")
 var ResultParalelogramArea = document.getElementById("ShowParalelogramArea");
 var ResultParalelogramPerimeter = document.getElementById("ShowParalelogramPerimeter");
 
-document.addEventListener('mouseup', function(e){
-    if (!NavMenu.contains(e.target)){
-        NavMenu.style.display = "none";
-    }
-});
-
 function showResult(){
     Results.style.display = "flex";
 }
